@@ -1,7 +1,7 @@
 <section>
   <h1>Directive {{"@for"}}</h1>
 
-  @for(u of users ; track u.id){
+  @for(u of users ; track u.id ){
   <ul>
     <li>Prénom: {{u.firstName}}</li>
     <li>Nom: {{u.lastName}}</li>
@@ -10,8 +10,17 @@
   </ul>
   }
 
-  <h1>Liste n°2: </h1>
+  <!-- Recommandation angular :
+      Tracker l'index (comme ci-dessous) sur les listes 'statiques'
+  -->
+  <ul>
+    @for(fruit of fruits ; let i = $index ; track i ){
+    <li>{{fruit}}</li>
+    }
+  </ul>
 
+
+  <h1>Liste n°2: (avc anciennene syntax)</h1>
 
   <!-- Anciennement, on n'utilisait pas les '@' pour les directives angular
 

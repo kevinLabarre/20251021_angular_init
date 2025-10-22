@@ -1,0 +1,18 @@
+<section>
+  <h1>Binding des propriétés et évènements HTML</h1>
+
+  <!-- Sans binding : on entre directmeent l'adresse de l'image -->
+  <img src="favicon.ico">
+
+  <!-- Avec binding : on donne l'adresse déclarée dans le ts -->
+  <img [src]="imgSrc">
+
+  <!--Avec binding : Attention, encore très récent ! (sera OK dans de prochaines versions) -->
+  <img src="{{imgSrc}}">
+
+  <!-- Avec binding -->
+  <button [disabled]="buttonDisabled">Cliquez ici !</button>
+
+  <button (click)="handleClick()">Désactiver le boutton</button>
+
+</section>

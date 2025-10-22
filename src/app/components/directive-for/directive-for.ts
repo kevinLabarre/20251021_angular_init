@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 export class DirectiveFor {
 
+  fruits: string[] = ["apple", "banana", "cherry", "durian", "elderberry", "apple"];
+
   users: IUser[] = [
     {
       id: 1,

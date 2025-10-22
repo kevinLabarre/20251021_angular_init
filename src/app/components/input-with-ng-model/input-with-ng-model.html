@@ -1,0 +1,23 @@
+<section>
+  <h1>
+    Input avec "ngModel"
+  </h1>
+
+  <input type="text" [(ngModel)]="name" (ngModelChange)="handleModelChange($event)">
+
+  <p>{{name}}</p>
+
+  <button (click)="handleReset()">vider l'input</button>
+
+
+  <h1>Exemple métier avec un ngModel (afficher/masquer un élément)</h1>
+
+  <input type="checkbox" [(ngModel)]="checkBoxValue" />
+
+  @if(checkBoxValue){
+  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat iste accusantium sapiente, at voluptates sint quae
+    aut iusto dolore repellendus maiores dolores nulla, cumque, inventore blanditiis earum eos? Incidunt, inventore.
+  </p>
+  }
+
+</section>

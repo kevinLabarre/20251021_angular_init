@@ -1,0 +1,24 @@
+<section>
+  <h1>Compteur</h1>
+
+  <p>Sur angular, les variables sont automatiquement surveillées par le framework.
+    Cela signifie que si elles sont modifiées, le framework mettra à jour l'affichage côté navigateur automatiquement
+
+    Attention : Sur les dernière versions angular (19/20), il est possible de désactiver ce fonctionnement
+
+    En réalité, la fonctionnalité est lié à zoneJS (dépendance historique d'angular), mais angular laisse aujourd'hui la
+    possibilité de ne pas utiliser cette dépendance. A la place, nous pouvons utiliser les 'signaux'.
+
+    Avantage de zoneJs --> Faciliter le dev des développeurs
+    Avantage des signaux --> Gain en performance
+
+  </p>
+
+
+  <p>Notre compteur: {{count}}</p>
+
+  <button (click)="increment()">+</button>
+  <button (click)="decrement()">-</button>
+  <button (click)="reset()">Reset</button>
+
+</section>
