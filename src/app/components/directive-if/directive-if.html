@@ -1,0 +1,29 @@
+<section>
+
+  <h1>Directive {{"@if"}}</h1>
+
+  @if(displayText){
+  <p>Voici le texte à afficher</p>
+  }
+
+  @if(displayText){
+  <p>Voici le texte à afficher</p>
+  } @else {
+  <p>J'ai choisi de ne pas afficher !</p>
+  }
+
+  <h2>Mon utilisateur:</h2>
+
+  <!-- Plus obligatoire : pour les valeurs qui peuvent être 'undefined'
+  il est courant d'utiliser des '@if'
+
+    -> ici, on vérifie que "user.name" n'est ni null ni undefined
+  -->
+  @if(user.name){
+  <p>{{user.name}}</p>
+  }
+
+
+
+
+</section>

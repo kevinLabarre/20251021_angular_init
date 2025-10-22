@@ -1,0 +1,27 @@
+<section>
+  <h1>Directive {{"@for"}}</h1>
+
+  @for(u of users ; track u.id){
+  <ul>
+    <li>Prénom: {{u.firstName}}</li>
+    <li>Nom: {{u.lastName}}</li>
+    <li>Age: {{u.age}}</li>
+    <li>Type de compte: {{u.bankAccount}}</li>
+  </ul>
+  }
+
+  <h1>Liste n°2: </h1>
+
+
+  <!-- Anciennement, on n'utilisait pas les '@' pour les directives angular
+
+    ATTENTION : Privilégier les nouvelles directives !
+  -->
+  <ul *ngFor="let u of users">
+    <li>Prénom: {{u.firstName}}</li>
+    <li>Nom: {{u.lastName}}</li>
+    <li>Age: {{u.age}}</li>
+    <li>Type de compte: {{u.bankAccount}}</li>
+  </ul>
+
+</section>

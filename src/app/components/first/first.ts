@@ -15,10 +15,27 @@ interface IUser {
   bankAccount: "COURANT" | "EPARGNE" | "NC",
   bankAccountEnum: BankAcountEnum,
 
+  // Si on utilise une interface 'juste' pour typer, on évité d'y mettre des méthodes
   // calculAge(): number
 }
 
+// Un des avantages de typer avec des class, est qu'on peut, à l'intérieur de nos class,
+// ajouter des méthodes
 class User implements IUser {
+  firstName
+  lastName
+  age
+  bankAccount
+  bankAccountEnum
+
+  constructor(firstName: string, lastName: string, age: number, bankAccount: "COURANT" | "EPARGNE" | "NC", bankAccountEnum: BankAcountEnum) {
+    this.firstName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.bankAccount = bankAccount
+    this.bankAccountEnum = bankAccountEnum
+  }
+
   calculAge(): number {
     return 0
   }
@@ -30,13 +47,13 @@ class UserClass {
   age: number;
   city: string;
 
-  get fullName() {
-    return this.firstName + this.lastName
-  }
+  // get fullName() {
+  //   return this.firstName + this.lastName
+  // }
 
-  calculAge() {
-    return 18
-  }
+  // calculAge() {
+  //   return 18
+  // }
 
   constructor(firstName: string, lastName: string, age: number, city: string) {
     this.firstName = firstName
@@ -89,7 +106,8 @@ export class First {
     bankAccountEnum: BankAcountEnum.COURANT
   }
 
-  // Typage avec un modèle (class) en passant par le constructeur
+  // Typage avec un modèle (class)
+  // On peut directement attribué des valeurs sans passer par le constructeur SI ON N'A AUCUNE METHODES / GETTER
   user4: UserClass = {
     firstName: "Jonh",
     lastName: "Doe",
