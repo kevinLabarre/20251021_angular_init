@@ -2,5 +2,9 @@
 
 <h1>Je suis le composant parent, et ci-dessous le composant enfant :</h1>
 
+<p>{{user.firstName}}</p>
+
 <!-- composant enfant ci-dessous -->
-<app-composant-enfant />
+<!-- les '[]' autour d'une propriété HTML permet d'indiquer à angular que l'élément
+passé entre les "" (dans notre cas user) est un élément javascript et pas un chaîne de caratère -->
+<app-composant-enfant [userInput]="user" />

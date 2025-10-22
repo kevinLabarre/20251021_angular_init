@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { first } from 'rxjs';
 
 
 enum BankAcountEnum {
@@ -12,7 +13,15 @@ interface IUser {
   lastName: string,
   age: number,
   bankAccount: "COURANT" | "EPARGNE" | "NC",
-  bankAccountEnum: BankAcountEnum
+  bankAccountEnum: BankAcountEnum,
+
+  // calculAge(): number
+}
+
+class User implements IUser {
+  calculAge(): number {
+    return 0
+  }
 }
 
 class UserClass {
@@ -20,6 +29,14 @@ class UserClass {
   lastName: string;
   age: number;
   city: string;
+
+  get fullName() {
+    return this.firstName + this.lastName
+  }
+
+  calculAge() {
+    return 18
+  }
 
   constructor(firstName: string, lastName: string, age: number, city: string) {
     this.firstName = firstName
