@@ -7,6 +7,7 @@ import { PropAndEventBinding } from './components/prop-and-event-binding/prop-an
 import { Compteur } from './components/compteur/compteur';
 import { InputWithNgModel } from './components/input-with-ng-model/input-with-ng-model';
 import { Exercice } from './components/exercices/exercice/exercice';
+import { RequestApi } from './components/request-api/request-api';
 
 export const routes: Routes = [
   { path: "", component: First },
@@ -16,5 +17,6 @@ export const routes: Routes = [
   { path: "bind-des-props-et-evevenements", component: PropAndEventBinding },
   { path: "compteur", component: Compteur },
   { path: "input-avec-ng-model", component: InputWithNgModel },
-  { path: "exercice", component: Exercice }
+  { path: "exercice", component: Exercice },
+  { path: "requete-api", component: RequestApi }
 ];
