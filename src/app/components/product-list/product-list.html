@@ -1,0 +1,14 @@
+<div>
+  <h1>{{title}}</h1>
+  <h1>Tableau de {{products[0].type}}</h1>
+
+  @for(p of products ; track p.id){
+  <ul>
+    <li>nom: {{p.nom}}</li>
+    <li>quantite: {{p.quantite}}</li>
+    <li>type: {{p.type}}</li>
+    <li>prix: {{p.prix}}</li>
+  </ul>
+  }
+
+</div>
