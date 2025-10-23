@@ -6,7 +6,7 @@ import { DirectiveFor } from './components/directive-for/directive-for';
 import { PropAndEventBinding } from './components/prop-and-event-binding/prop-and-event-binding';
 import { Compteur } from './components/compteur/compteur';
 import { InputWithNgModel } from './components/input-with-ng-model/input-with-ng-model';
-import { Exercice } from './components/exercice/exercice';
+import { Exercice } from './components/exercices/exercice/exercice';
 
 export const routes: Routes = [
   { path: "", component: First },
