@@ -4,8 +4,51 @@
   <p>Pour effectuer des requêtes HTTP avec angular, il est recommandé d'utiliser 'HttpClient'</p>
   <p>'HttpClient' est un outil angular</p>
 
-  @if(news.length > 0) {
-  <p>{{news[0].titre}}</p>
+  <!--
+  @if(news.length > 0 ){
+  @for(n of news ; track n.id){
+  <ul>
+    <li>{{n.titre}}</li>
+    <li>
+      <img [src]="n.image" />
+    </li>
+  </ul>
   }
+  } @else {
+    <p>Chargement des données ....</p>
+  }
+
+  @if(error){
+  <p>Une erreur est survenue: message d'erreur -> {{error.message}}</p>
+  }
+  -->
+
+
+
+
+  @if(error){
+  <p>Une erreur est survenue</p>
+  <p>Si on veut afficher le message d'erreur de l'erreur reçue :
+    {{error.message}}
+  </p>
+  } @else {
+
+  @if(news.length > 0) {
+  @for(n of news ; track n.id){
+  <ul>
+    <li>{{n.titre}}</li>
+    <li>
+      <img [src]="n.image" />
+    </li>
+  </ul>
+  }
+  }
+  @else {
+  <p>Chargement des news ...</p>
+  }
+
+  }
+
+
 
 </section>
