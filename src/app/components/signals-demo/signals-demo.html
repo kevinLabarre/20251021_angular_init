@@ -3,7 +3,16 @@
 
   <p>Pour lire un signal: {{count()}}</p>
 
-  <button (click)="increment()">+</button>
-  <button (click)="reset()">reset</button>
+  <button class="btn" (click)="increment()">+</button>
+  <button class="btn" (click)="decrement()">-</button>
+  <button class="btn" (click)="reset()">reset</button>
+
+  <h2>Les news (récup HTTP et utilisation d'un signal)</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    @for(n of news() ; track n.id){
+    <app-news-card [news]="n" />
+    }
+  </div>
 
 </section>

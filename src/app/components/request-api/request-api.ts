@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
+import { NewsCard } from "../../news-card/news-card";
 
 @Component({
   selector: 'app-request-api',
-  imports: [],
+  imports: [NewsCard],
   templateUrl: './request-api.html',
   styleUrl: './request-api.css'
 })
@@ -42,9 +43,10 @@ export class RequestApi implements OnInit {
       error: (e) => {  // Fonction se déclenchera si on a un retour 'erreur'
         this.error = e
         console.log("this.error ==> ", this.error!.message)
-        this.cdr.detectChanges()
       },
-      // complete: () => { // Fonction se déclenchera QUAND la requête est terminée (qu'on est une erreur ou non) }
+      complete: () => { // Fonction se déclenchera QUAND la requête est terminée (qu'on est une erreur ou non) }
+        this.cdr.detectChanges() // Pour forcer 'angular' à mettre à jour notre vue
+      }
     })
 
   }

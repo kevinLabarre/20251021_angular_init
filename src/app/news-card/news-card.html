@@ -1,0 +1,16 @@
+<div class="card bg-base-100 w-96 border border-gray-200">
+  <figure class="h-32 overflow-hidden">
+    <img [src]="news.image" alt="Shoes" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">
+      {{news.titre}}
+      <div class="badge badge-secondary">{{news.categorie}}</div>
+    </h2>
+    <p class="h-32 overflow-hidden">{{news.texte}}</p>
+    <div class="card-actions justify-end">
+      <div class="badge badge-outline">publication: {{news.dateModification}}</div>
+      <div class="badge badge-outline">modification: {{news.datePublication}}</div>
+    </div>
+  </div>
+</div>
