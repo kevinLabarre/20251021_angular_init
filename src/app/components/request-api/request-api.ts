@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import { NewsCard } from "../../news-card/news-card";
+import { NewsCard } from "../news-card/news-card";
+import { NewsService } from '../../services/news-service';
 
 @Component({
   selector: 'app-request-api',
@@ -16,7 +17,11 @@ export class RequestApi implements OnInit {
 
   // Angular gère automatiquement l'injection de dépendance via le constructeur
   // Cela nous permet d'avoir accès à une instance de HttpClient dans notre composant
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) { }
+  constructor(
+    private http: HttpClient,
+    private cdr: ChangeDetectorRef,
+    private service: NewsService
+  ) { }
 
 
   // Le onInit est appelé juste après le constructeur
@@ -26,6 +31,7 @@ export class RequestApi implements OnInit {
   ngOnInit(): void {
     this.loadNews()
     // this.loadNewsAsync()
+    // this.loadWithService()
   }
 
   loadNews() {
@@ -51,8 +57,15 @@ export class RequestApi implements OnInit {
 
   }
 
-  // async loadNewsAsync() {
-  //   this.news = await firstValueFrom(this.http.get<any[]>("http://localhost:3000/actualites"))
-  // }
+  async loadNewsAsync() {
+    this.news = await firstValueFrom(this.http.get<any[]>("http://localhost:3000/actualites"))
+  }
 
+  // Dans un projet réel, nous utiliserons des services
+  loadWithService() {
+    this.service.getNews().subscribe((resp) => {
+      this.news = resp
+      this.cdr.detectChanges() // Pour forcer 'angular' à mettre à jour notre vue
+    })
+  }
 }

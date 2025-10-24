@@ -8,6 +8,9 @@
       <div class="badge badge-secondary">{{news.categorie}}</div>
     </h2>
     <p class="h-32 overflow-hidden">{{news.texte}}</p>
+    <div>
+      <button (click)="handleDelete()" class="btn btn-error">Supprimer</button>
+    </div>
     <div class="card-actions justify-end">
       <div class="badge badge-outline">publication: {{news.dateModification}}</div>
       <div class="badge badge-outline">modification: {{news.datePublication}}</div>

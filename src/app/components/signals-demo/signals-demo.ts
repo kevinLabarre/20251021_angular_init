@@ -1,7 +1,8 @@
 import { Component, OnInit, signal, Signal, WritableSignal } from '@angular/core';
 import { INews } from '../../interfaces/INews';
 import { HttpClient } from '@angular/common/http';
-import { NewsCard } from "../../news-card/news-card";
+import { NewsCard } from "../news-card/news-card";
+import { NewsService } from '../../services/news-service';
 
 @Component({
   selector: 'app-signals-demo',
@@ -28,19 +29,18 @@ export class SignalsDemo implements OnInit {
   }
 
   // EXEMPLE 2: Requete API et utilisation d'un signal
-  constructor(private http: HttpClient) { }
+  constructor(private service: NewsService) { }
 
   ngOnInit(): void {
-    this.loadProducts()
+    this.loadNews()
   }
 
   news: WritableSignal<INews[]> = signal([])
 
-  loadProducts() {
-    this.http.get<INews[]>("http://localhost:3000/actualites").subscribe({
+  loadNews() {
+    this.service.getNews().subscribe({
       next: (resp) => this.news.set(resp),
       error: (e) => console.error(e.message)
     })
   }
-
 }
