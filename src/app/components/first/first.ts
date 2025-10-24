@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { first } from 'rxjs';
+import { ShareDataService } from '../../services/share-data-service';
 
 
 enum BankAcountEnum {
@@ -127,4 +128,20 @@ export class First {
   }
 
   bankAccount: "COURANT" | "EPARGNE" | "NC" = "EPARGNE"
+
+
+
+  constructor(private shareService: ShareDataService) {
+    this.setData()
+  }
+
+  data = ""
+
+  setData() {
+    this.shareService.dataShareByShareService$.subscribe(resp => {
+      this.data = resp
+    })
+  }
+
+
 }

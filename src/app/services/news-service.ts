@@ -16,9 +16,12 @@ export class NewsService {
     return this.http.get<INews[]>(this.baseUrl)
   }
 
-  deleteNews(id: number) {
+  deleteNews(id: number): Observable<INews> {
     return this.http.delete<INews>(`${this.baseUrl}/${id}`)
   }
 
+  addNews(news: INews): Observable<INews> {
+    return this.http.post<INews>(this.baseUrl, news)
+  }
 
 }

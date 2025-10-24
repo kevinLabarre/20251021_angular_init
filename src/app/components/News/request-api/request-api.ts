@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import { NewsCard } from "../news-card/news-card";
-import { NewsService } from '../../services/news-service';
+import { NewsCard } from '../news-card/news-card';
+import { NewsService } from '../../../services/news-service';
+import { AddNews } from "../add-news/add-news";
 
 @Component({
   selector: 'app-request-api',
-  imports: [NewsCard],
+  imports: [NewsCard, AddNews],
   templateUrl: './request-api.html',
   styleUrl: './request-api.css'
 })
@@ -68,4 +69,14 @@ export class RequestApi implements OnInit {
       this.cdr.detectChanges() // Pour forcer 'angular' à mettre à jour notre vue
     })
   }
+
+  // Fonction lié à l'output du composant NewsCard
+  // objectif : le composant enfant envoie, à chaque suppression l'id
+  // de la news supprimée
+  handleDeleteOneNews(id: number) {
+
+    // id reçu en param, est l'id de la news supprimé
+    this.news = this.news.filter(n => n.id !== id)
+  }
+
 }

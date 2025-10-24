@@ -1,0 +1,9 @@
+<div>
+
+  @if(data){
+  {{data}}
+  }
+
+  <p>Ci-dessous le composant enfant</p>
+  <app-enfant-output (dataFct)="passDataFct($event)" />
+</div>

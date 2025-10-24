@@ -7,10 +7,13 @@ import { PropAndEventBinding } from './components/prop-and-event-binding/prop-an
 import { Compteur } from './components/compteur/compteur';
 import { InputWithNgModel } from './components/input-with-ng-model/input-with-ng-model';
 import { Exercice } from './components/exercices/exercice/exercice';
-import { RequestApi } from './components/request-api/request-api';
+import { RequestApi } from './components/News/request-api/request-api';
 import { SignalsDemo } from './components/signals-demo/signals-demo';
+import { NotFound } from './components/not-found/not-found';
+import { ShareService } from './components/share-service/share-service';
 
 export const routes: Routes = [
+
   { path: "", component: First },
   { path: "composant-parent-enfant", component: ParentEtEnfant },
   { path: "directive-if", component: DirectiveIf },
@@ -20,5 +23,9 @@ export const routes: Routes = [
   { path: "input-avec-ng-model", component: InputWithNgModel },
   { path: "exercice", component: Exercice },
   { path: "requete-api", component: RequestApi },
-  { path: "signals", component: SignalsDemo }
+  { path: "signals", component: SignalsDemo },
+  { path: "service-partage", component: ShareService },
+
+  //Page 404 ci-dessous:
+  { path: "**", component: NotFound }
 ];

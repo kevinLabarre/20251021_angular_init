@@ -46,24 +46,6 @@
       "dateModification": "2025-07-04T08:10:47.242Z"
     },
     {
-      "id": "6",
-      "categorie": "Responsabilité",
-      "titre": "FakeBank devient écologique : nos relevés bancaires sont maintenant imprimés sur des feuilles de chou",
-      "texte": "Dans le cadre de notre engagement pour la planète, tous nos relevés bancaires sont désormais imprimés sur des feuilles de chou bio. Bonus : ils sont comestibles en cas de crise financière !",
-      "datePublication": "2023-11-15",
-      "dateModification": null,
-      "image": "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?q=80&w=800"
-    },
-    {
-      "id": "7",
-      "categorie": "Promotion",
-      "titre": "Ouvrez un compte et recevez un NFT de notre mascotte 'Coinky le cochon'",
-      "texte": "Pour toute ouverture de compte, recevez un NFT exclusif de notre mascotte 'Coinky le cochon'. Attention, la valeur de ce NFT est aussi volatile que nos conseils d'investissement.",
-      "datePublication": "2023-10-10",
-      "dateModification": null,
-      "image": "https://images.unsplash.com/photo-1603912699214-92627f304eb6?q=80&w=800"
-    },
-    {
       "id": "8",
       "categorie": "International",
       "titre": "FakeBank ouvre une succursale sur Mars",
@@ -127,22 +109,13 @@
       "image": "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=800"
     },
     {
-      "id": "15",
-      "categorie": "Service Client",
-      "titre": "Notre nouveau service téléphonique vous met en attente avant même que vous n'appeliez",
-      "texte": "Grâce à notre technologie prédictive révolutionnaire, nous savons quand vous allez nous appeler. Pour gagner du temps, nous vous mettons en attente 10 minutes avant même que vous ne composiez notre numéro. Un email vous informera que vous êtes déjà en attente.",
-      "datePublication": "2023-11-28",
-      "dateModification": "2023-11-29",
-      "image": "https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=800"
-    },
-    {
-      "id": "16",
-      "categorie": "Investissement",
-      "titre": "FakeBank propose d'investir dans les rêves brisés : 'rendement garanti de 100% en déception'",
-      "texte": "Notre nouveau fonds d'investissement se spécialise dans les startups vouées à l'échec et les ambitions irréalistes. Notre brochure promet : 'La seule chose qui monte plus vite que l'inflation, c'est le taux de désillusion de nos clients.'",
-      "datePublication": "2023-12-05",
-      "dateModification": null,
-      "image": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=800"
+      "id": "153f",
+      "titre": "Titre Actu",
+      "texte": "lorem ipsum",
+      "image": "/img.png",
+      "categorie": "cate",
+      "dateModification": "2025-10-24T14:16:53.411Z",
+      "datePublication": "2025-10-24T14:16:53.411Z"
     }
   ]
 }

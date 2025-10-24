@@ -1,8 +1,7 @@
 import { Component, OnInit, signal, Signal, WritableSignal } from '@angular/core';
 import { INews } from '../../interfaces/INews';
-import { HttpClient } from '@angular/common/http';
-import { NewsCard } from "../news-card/news-card";
 import { NewsService } from '../../services/news-service';
+import { NewsCard } from '../News/news-card/news-card';
 
 @Component({
   selector: 'app-signals-demo',

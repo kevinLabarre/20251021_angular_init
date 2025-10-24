@@ -1,10 +1,17 @@
-<h1>Import d'un composant 'enfant'</h1>
+<h1>Passage de données de parent à enfant (@Input)</h1>
+<div class="m-5 p-2 border">
+  <h1>Je suis le composant parent, et ci-dessous le composant enfant :</h1>
 
-<h1>Je suis le composant parent, et ci-dessous le composant enfant :</h1>
+  <p>{{user.firstName}}</p>
 
-<p>{{user.firstName}}</p>
+  <!-- composant enfant ci-dessous -->
+  <!-- les '[]' autour d'une propriété HTML permet d'indiquer à angular que l'élément
+    passé entre les "" (dans notre cas user) est un élément javascript et pas un chaîne de caratère -->
+  <app-composant-enfant [userInput]="user" />
+</div>
 
-<!-- composant enfant ci-dessous -->
-<!-- les '[]' autour d'une propriété HTML permet d'indiquer à angular que l'élément
-passé entre les "" (dans notre cas user) est un élément javascript et pas un chaîne de caratère -->
-<app-composant-enfant [userInput]="user" />
+
+<h1>Passage de données de enfant à parent (@Output)</h1>
+<div class="m-5 p-2 mt-10 border">
+  <app-output />
+</div>

@@ -1,0 +1,18 @@
+<div>
+  <button (click)="handleDisplayForm()" class="btn btn-primary">Ajouter une actualité</button>
+
+  @if(displayForm){
+  <form [formGroup]="newsForm" (ngSubmit)="handleSubmit()">
+    <input type="text" formControlName="titre" placeholder="titre" />
+    <input type="text" formControlName="texte" placeholder="texte" />
+    @if(textRequiredError && textTouched){
+    <span>erreur: champ requis</span>
+    }
+    <input type="text" formControlName="image" placeholder="image" />
+    <input type="text" formControlName="categorie" placeholder="categorie" />
+
+    <button type="submit">Ajouter</button>
+  </form>
+  }
+
+</div>
